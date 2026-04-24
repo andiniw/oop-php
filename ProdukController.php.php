@@ -1,10 +1,11 @@
 <?php
-require_once '../models/ProdukModel.php';
+require_once __DIR__ . '/../models/ProdukModel.php';
 
 class ProdukController {
     public function index() {
         $model = new ProdukModel();
         $data = $model->getAll();
-        include '../views/produk.php';
+
+        include __DIR__ . '/../views/produk/index.php';
     }
 }
